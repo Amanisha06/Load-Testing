@@ -10,8 +10,8 @@
     </TestPlan>
     <hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
-        <intProp name="ThreadGroup.num_threads">2</intProp>
-        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <intProp name="ThreadGroup.num_threads">4</intProp>
+        <intProp name="ThreadGroup.ramp_time">2</intProp>
         <longProp name="ThreadGroup.duration">1800</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -21,7 +21,7 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Sign Up" enabled="false">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Sign Up">
           <stringProp name="HTTPSampler.domain">ai-documentation.weavers-web.com</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/v1/auth/register</stringProp>
@@ -49,7 +49,7 @@
             <stringProp name="filename">D:/apache-jmeter-5.6.3/file.csv</stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>
             <stringProp name="variableNames">name,companyname,email,company_email,password,phone,address,eic,taxnumber</stringProp>
-            <boolProp name="ignoreFirstLine">false</boolProp>
+            <boolProp name="ignoreFirstLine">true</boolProp>
             <stringProp name="delimiter">,</stringProp>
             <boolProp name="quotedData">false</boolProp>
             <boolProp name="recycle">false</boolProp>
@@ -71,7 +71,7 @@
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Sign In" enabled="false">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Sign In">
           <stringProp name="HTTPSampler.domain">ai-documentation.weavers-web.com</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/v1/auth/login</stringProp>
@@ -117,7 +117,7 @@
             <stringProp name="filename">D:/apache-jmeter-5.6.3/signup1.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">name,email,password</stringProp>
-            <boolProp name="ignoreFirstLine">false</boolProp>
+            <boolProp name="ignoreFirstLine">true</boolProp>
             <stringProp name="delimiter">,</stringProp>
             <boolProp name="quotedData">false</boolProp>
             <boolProp name="recycle">false</boolProp>
@@ -126,7 +126,7 @@
           </CSVDataSet>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Company add" enabled="false">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Company add">
           <stringProp name="HTTPSampler.domain">ai-documentation.weavers-web.com</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/v1/auth/add-company</stringProp>
@@ -167,11 +167,11 @@
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-            <stringProp name="filename">D:/apache-jmeter-5.6.3/file.csv</stringProp>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
+            <stringProp name="filename">D:/apache-jmeter-5.6.3/signup1.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">name,companyname,email,company_email,password,phone,address,eic,taxnumber </stringProp>
-            <boolProp name="ignoreFirstLine">false</boolProp>
+            <boolProp name="ignoreFirstLine">true</boolProp>
             <stringProp name="delimiter">,</stringProp>
             <boolProp name="quotedData">false</boolProp>
             <boolProp name="recycle">false</boolProp>
@@ -221,11 +221,11 @@
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-            <stringProp name="filename">D:/apache-jmeter-5.6.3/file.csv</stringProp>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
+            <stringProp name="filename">D:/apache-jmeter-5.6.3/signup1.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">name,companyname,email,company_email,password,phone,address,eic,taxnumber </stringProp>
-            <boolProp name="ignoreFirstLine">false</boolProp>
+            <boolProp name="ignoreFirstLine">true</boolProp>
             <stringProp name="delimiter">,</stringProp>
             <boolProp name="quotedData">false</boolProp>
             <boolProp name="recycle">false</boolProp>
@@ -251,7 +251,7 @@
     &quot;storeId&quot;: 1,&#xd;
     &quot;isAutoGenerated&quot;: true,&#xd;
     &quot;value&quot;: {&#xd;
-        &quot;Date&quot;: &quot;16-09-2025&quot;,&#xd;
+        &quot;Date&quot;: &quot;18-09-2025&quot;,&#xd;
         &quot;Time&quot;: &quot;12:00&quot;,&#xd;
         &quot;Area treated&quot;: &quot;Test&quot;,&#xd;
         &quot;Type of treatment&quot;: &quot;Test&quot;,&#xd;
@@ -267,7 +267,7 @@
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="Content-Type" elementType="Header">
                 <stringProp name="Header.name">Content-Type</stringProp>
@@ -280,11 +280,11 @@
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-            <stringProp name="filename">D:/apache-jmeter-5.6.3/file.csv</stringProp>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
+            <stringProp name="filename">D:/apache-jmeter-5.6.3/signup1.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">name,companyname,email,company_email,password,phone,address,eic,taxnumber </stringProp>
-            <boolProp name="ignoreFirstLine">false</boolProp>
+            <boolProp name="ignoreFirstLine">true</boolProp>
             <stringProp name="delimiter">,</stringProp>
             <boolProp name="quotedData">false</boolProp>
             <boolProp name="recycle">false</boolProp>
